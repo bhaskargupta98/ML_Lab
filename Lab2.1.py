@@ -16,8 +16,10 @@ for i in range(rows):
 print(matrix)
 row1 = int(input("Enter the number of rows from begg: "))
 col1 = int(input("Enter the number of cols from begg "))
-matrix1 = np.zeros((row1, col1))
-for i in range(row1):
-    for j in range(col1):
-        matrix1[i][j] = matrix[i][j]
+a = int(input("Enter the final row"))
+b = int(input("Enter the final col"))
+matrix1 = np.zeros((a-row1, b-col1))
+for i in range(a-row1):
+    for j in range(b-col1):
+        matrix1[i][j] = matrix[i+row1][j+col1]
 print(matrix1)
